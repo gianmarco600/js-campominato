@@ -17,10 +17,10 @@ console.log('lista numeri inseriti: ' , playerTries,'numero tentativi: ', player
 
 
 console.log('hai scelto: ' , num);
-while (ruleChecker(num) && playerTries.length < (max - mode)){
+while (ruleChecker(num)){
     playerTries.push(num);
-    askInput();
     console.log('lista numeri inseriti: ' , playerTries,'numero tentativi: ', playerTries.length);
+    num = askInput();
 }
 
 
