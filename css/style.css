@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f1faee;
+}
+
+.main_bg{
+    background-color: #a8dadc;
+    border-radius: 30px;
+}
+
+._btn_main{
+    background-color: #457b9d;
+    color: white;
+}
+
+._btn_main:hover{
+    color: #e63946;
+    background-color: #f1faee;
+}
+
+._show{
+    display: block;
+}
+
+._hidden{
+    display: none;
+}

@@ -4,10 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
+
     <title>Document</title>
 </head>
 <body>
-    <script src="js/script.js"></script>
+    <section class="container-md main_bg p-3 mt-5 _hidden">
+        <div class="row justify-content-center ">
+            <div class="col-8 text-center">
+                <h2>Scegli il livello di difficoltà</h2>
+                <div class="row justify-content-around my-5">
+                    <div class="col-3">
+                        <h4>facile</h4>
+                        <input class="" type="radio" id="facile" name="diff" value="0">
+                        <label for="facile">
+                            <i class="fas fa-star"></i>
+                        </label>
+                    </div>
+                    <div class="col-3">
+                        <h4>medio</h4>
+                        <input class="" type="radio" id="medio" name="diff" value="1">
+                        <label for="medio">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </label>
+                    </div>
+                    <div class="col-3">
+                        <h4>difficile</h4>
+                        <input class="" type="radio" id="difficile" name="diff" value="2">
+                        <label for="difficile">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </label> 
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="btn _btn_main">GIOCA!</div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- <script src="js/script.js"></script> -->
 </body>
 </html>
