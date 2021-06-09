@@ -4,15 +4,14 @@
 // Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
 // BONUS: (da fare solo se funziona tutto il resto) all’inizio il software richiede anche una difficoltà all’utente che cambia il range di numeri casuali: con difficoltà 0 => tra 1 e 100 con difficoltà 1 => tra 1 e 80 con difficoltà 2 => tra 1 e 50
 
-var max;
-var max = document.getElementById("inizia").addEventListener("click",diff);
-
+var max = diff() ;
 var min = 1 ;
 var playerTries = [];
-var mines = randomArr( 1 , 101 , 16);
+var mode = 16;
+var mines = randomArr( 1 , 101 , mode);
 console.log(mines);
 
-gioca();
+// gioca();
 
 function gioca(){
     var num = askInput();
@@ -51,7 +50,7 @@ function randomArr( max , min , diff){
 
 // chiede un input al giocatore e ritorna il numero scelto
 function askInput(){
-    var attempt = parseInt(prompt('inserisci un numero da 1 a ' +  max));
+    var attempt = parseInt(prompt('inserisci un numero da 1 a 100'));
     inputCheck(attempt);
     // console.log('tentativo inserito:' , attempt);
     return attempt;
@@ -60,14 +59,14 @@ function askInput(){
 
 // controlla che l'input della funzione rispetti le regole fornite dai valori max e min
 function inputCheck(input){
-    if (  input > max || input < min || isNaN(input) ){
+    if (  input >= max || input < min || isNaN(input) ){
         alert('ho detto da 1 a 100');
         gioca();
     }
 }
 
 function ruleChecker(playerNumb){
-    while (playerTries.length <= (max - mines.length )){
+    while (playerTries.length < (100 - mines.length )){
 
         if ( !mines.includes(playerNumb)){
             if(!playerTries.includes(playerNumb)){
@@ -88,23 +87,19 @@ function ruleChecker(playerNumb){
     }
 }
 
-// seleziona difficoltà
-
 function diff(){
-
     var max;
-    if (document.getElementById("facile").checked = true){
+    if (document.getElementById("facile").checked == true){
         max = 100;
         
     }
-    else if (document.getElementById("medio").checked = true){
+    else if (document.getElementById("medio").checked == true){
         max = 80;
     
     }
-    else if (document.getElementById("difficile").checked = true){
+    else if (document.getElementById("difficile").checked == true){
         max = 50;
 
     }
     return max;
 }
-
