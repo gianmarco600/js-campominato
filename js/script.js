@@ -4,7 +4,9 @@
 // Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
 // BONUS: (da fare solo se funziona tutto il resto) all’inizio il software richiede anche una difficoltà all’utente che cambia il range di numeri casuali: con difficoltà 0 => tra 1 e 100 con difficoltà 1 => tra 1 e 80 con difficoltà 2 => tra 1 e 50
 
-var max = diff();
+var max;
+var max = document.getElementById("inizia").addEventListener("click",diff);
+
 var min = 1 ;
 var playerTries = [];
 var mines = randomArr( 1 , 101 , 16);
@@ -89,20 +91,20 @@ function ruleChecker(playerNumb){
 // seleziona difficoltà
 
 function diff(){
-    var mode = prompt("inserire livello difficolta");
-    console.log(mode);
+
     var max;
-    if (mode == 0){
+    if (document.getElementById("facile").checked = true){
         max = 100;
         
     }
-    else if (mode == 1){
+    else if (document.getElementById("medio").checked = true){
         max = 80;
     
     }
-    else if (mode == 2){
+    else if (document.getElementById("difficile").checked = true){
         max = 50;
 
     }
     return max;
 }
+
