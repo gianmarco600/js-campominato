@@ -13,19 +13,19 @@
 </head>
 <body>
     <!-- sezione seleziona diff -->
-    <section class="container-md main_bg p-3 mt-5 _show">
+    <section id="diff" class="container-md main_bg p-5 mt-5 ">
         <div class="row justify-content-center ">
             <div class="col-8 text-center">
                 <h2>Scegli il livello di difficoltà</h2>
                 <div class="row justify-content-around my-5">
-                    <div class="col-3">
+                    <div class="col-3 _bg_main_2 p-4">
                         <h4>Facile</h4>
                         <input class="" type="radio" id="facile" name="diff" value="0">
                         <label for="facile">
                             <i class="fas fa-star"></i>
                         </label>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 _bg_main_2 p-4">
                         <h4>Medio</h4>
                         <input class="" type="radio" id="medio" name="diff" value="1">
                         <label for="medio">
@@ -33,7 +33,7 @@
                             <i class="fas fa-star"></i>
                         </label>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 _bg_main_2 p-4">
                         <h4>Difficile</h4>
                         <input class="" type="radio" id="difficile" name="diff" value="2">
                         <label for="difficile">
@@ -50,15 +50,32 @@
         </div>
     </section>
 
-    <section class="container-md ">
-        <div class="row justify-content-center">
-            <div class="col-4">
+    <section id="input" class="container-md mt-5 _hidden">
+        <div class="row justify-content-center main_bg py-5">
+            <div class="col-4 text-center _bg_main_2 py-5">
+                <label class="mb-3 _label" id='label' for="attempt"></label>
                 <input type="number" name="attempt" id="attempt">
-                <div id="inviatentativo" class="btn _btn_main">prova!</div>
+                <div id="inviatentativo" class="btn _btn_main my-5">Prova!</div>
+            </div>
+        </div>
+        <div id='console' class="row w-100 justify-content-center mt-5 _hidden">
+            <div class="col-1 console main_bg">
+            <ul id='output' class="p-4">
+                
+            </ul>
             </div>
         </div>
 
     </section>
-    <script src="js/script.js"></script>
+    <section id="persa" class="container-md mt-5 _hidden">
+        <div class="row align-content-center _bg_main_2 justify-content-center">
+            <div class="col-12 p-5">
+                <h1 id="fine" class="text-center "></h1>
+            </div>
+            <div id="riprova" class="btn _btn_main my-5">Prova!</div>
+
+        </div>
+    </section>
+    <script src="js/script2.js"></script>
 </body>
 </html>
