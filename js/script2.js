@@ -54,28 +54,28 @@ function getValue(){
     }
     else{
         if(mine.includes(attempt)){
-            alert();
+            
             document.getElementById('inviatentativo').removeEventListener('click' , getValue , false );
             
             document.getElementById("input").classList.add("_hidden");  
             
             document.getElementById("console").classList.add("_hidden")
             document.getElementById("persa").classList.remove("_hidden"); 
-            document.getElementById('fine').innerHTML = "OPS! Sei esploso al tentativo numero " + attemptArr.length+1;
+            document.getElementById('fine').innerHTML = "OPS! Sei esploso al tentativo numero " + (attemptArr.length+1);
             document.getElementById('output').innerHTML = "";
             document.getElementById('riprova').addEventListener('click' , beforeStart);
 
         }
         else if(attemptArr.includes(attempt)){
-            document.getElementById('output').innerHTML += "<li class='text-center'>Non credo tu abbia davvero inserito un numero, ritenta</li>";
+            document.getElementById('output').innerHTML += "<li class='text-center _yellow'>Occhio hai già inserito inserito questo numero.</li>";
             
         }
         else if (isNaN(attempt)){
-            document.getElementById('output').innerHTML += "<li class='text-center'>Non credo tu abbia davvero inserito un numero, ritenta</li>";
+            document.getElementById('output').innerHTML += "<li class='text-center _red'>Non credo tu abbia davvero inserito un numero, ritenta.</li>";
         }
         else{
             attemptArr.push(attempt);
-            document.getElementById('output').innerHTML += "<li class='text-center'>Hai inserito il numero " + attempt + ". <strong>Tentativo numero " + attemptArr.length + "</strong></li>";
+            document.getElementById('output').innerHTML += "<li class='text-center _green'>Hai inserito il numero " + attempt + ". <strong>Tentativo numero " + attemptArr.length + "</strong></li>";
         }
         }
     document.getElementById('attempt').value = "";

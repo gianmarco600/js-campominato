@@ -6,6 +6,7 @@
 
 body{
     background-color: #361d32;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .main_bg{
@@ -31,12 +32,14 @@ body{
     line-height: 85px;
     font-size: 50px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition:ease .4s;
 }
 
 ._btn_main:hover{
     color: #f55951;
-    background-color: #edd2cb;
+    background-color: #cbe6ed;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(1.1, 1.1);
 }
 
 ._show{
@@ -66,6 +69,29 @@ li{
     list-style: none;
 }
 
-h1{
+h3{
     color: #f1faee ;
+}
+
+._red{
+    color: #f55951;
+}
+
+._green{
+    color: teal;
+}
+
+._yellow{
+    color: tomato;
+}
+
+h1{
+    color: #f1faee;
+    font-size: 100px;
+    font-weight: 600;
+}
+
+p{
+    color: #f1faee;
+    font-size: 40px;
 }
